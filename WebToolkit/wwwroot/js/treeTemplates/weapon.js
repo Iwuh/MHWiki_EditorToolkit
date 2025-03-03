@@ -719,6 +719,16 @@ class WeaponTemplate
 								<label>Note 3</label>
 								<input type="text" class="form-control weapon-hh-note-3-input data-value" data-label="hh-note-3">
 							</div>`);
+				if ($("#ddlGameSelect").val() == "MHWilds") {
+					$("#divSpecialWeaponField").append(`<div class="col-6">
+								<label>Special Melody</label>
+								<input type="text" class="form-control weapon-hh-special-melody-input data-value" data-label="hh-special-melody">
+							</div>
+							<div class="col-6">
+								<label>Echo Bubble</label>
+								<input type="text" class="form-control weapon-hh-echo-bubble-input data-value" data-label="hh-echo-bubble">
+							</div>`);
+				}
 				break;
 			case "IG":
 				$("#divSpecialWeaponField").append(`

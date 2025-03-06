@@ -113,6 +113,13 @@ namespace MediawikiTranslator.Generators
 					case "HH":
 						ret.AppendLine("!class=\"hide-on-mobile\"|{{UI|MHWI|HH Menu Notes}}");
 						mobileHeaderBuilder.AppendLine("!{{UI|MHWI|HH Menu Notes}}");
+						if (srcData[0].Game == "MHWilds")
+						{
+                            ret.AppendLine("!class=\"hide-on-mobile\"|{{UI|MHWilds|HH Special Melody}}");
+                            mobileHeaderBuilder.AppendLine("!{{UI|MHWilds|HH Special Melody}}");
+                            ret.AppendLine("!class=\"hide-on-mobile\"|{{UI|MHWilds|HH Echo Bubble}}");
+                            mobileHeaderBuilder.AppendLine("!{{UI|MHWilds|HH Echo Bubble}}");
+                        }
 						break;
 					case "IG":
 						ret.AppendLine("!class=\"hide-on-mobile\"|{{UI|MHWI|IG Kinsect Bonus}}");
@@ -365,6 +372,11 @@ namespace MediawikiTranslator.Generators
 					break;
 				case "HH":
 					ret.AppendLine($"|{{{{UI|MHWI|HH Note|1 {dataObj.HHNote1}}}}}{{{{UI|MHWI|HH Note|2 {dataObj.HHNote2}}}}}{{{{UI|MHWI|HH Note|3 {dataObj.HHNote3}}}}}");
+					if (dataArray.Game == "MHWilds")
+					{
+                        ret.AppendLine($"|{(!string.IsNullOrEmpty(dataObj.HHSpecialMelody) ? dataObj.HHSpecialMelody : " - ")}");
+                        ret.AppendLine($"|{(!string.IsNullOrEmpty(dataObj.HHEchoBubble) ? dataObj.HHEchoBubble : " - ")}");
+                    }
 					break;
 				case "IG":
 					ret.AppendLine($"|{(!string.IsNullOrEmpty(dataObj.IGKinsectBonus) ? dataObj.IGKinsectBonus : " - ")}");

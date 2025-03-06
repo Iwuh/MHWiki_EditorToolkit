@@ -133,6 +133,12 @@ namespace MediawikiTranslator.Models.WeaponTree
 		[JsonProperty("hh-note-3", NullValueHandling = NullValueHandling.Ignore)]
 		public string HHNote3 { get; set; }
 
+		[JsonProperty("hh-special-melody", NullValueHandling = NullValueHandling.Ignore)]
+		public string HHSpecialMelody { get; set; }
+
+        [JsonProperty("hh-echo-bubble", NullValueHandling = NullValueHandling.Ignore)]
+        public string HHEchoBubble { get; set; }
+
 		[JsonProperty("ig-kinsect-bonus", NullValueHandling = NullValueHandling.Ignore)]
 		public string IGKinsectBonus { get; set; }
 
